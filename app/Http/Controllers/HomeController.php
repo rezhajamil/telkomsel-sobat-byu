@@ -15,7 +15,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        ddd(app()->environment());
         return view('home');
     }
 
