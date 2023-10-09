@@ -57,7 +57,7 @@
                     <div class="w-full col-span-full md:col-span-1">
                         <input
                             class="w-full border-2 rounded outline-2 placeholder:text-xs sm:placeholder:text-sm outline-sekunder ring-sekunder border-sekunder"
-                            id="telp" placeholder="Nomor Telepon byU (08512345xxxx)" type="number" name="telp"
+                            id="telp" placeholder="Nomor Telepon (081234567890)" type="number" name="telp"
                             value="{{ old('telp') }}">
                         @error('telp')
                             <span class="inline-block mt-1 text-sm italic text-red-600">{{ $message }}</span>

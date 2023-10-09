@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Rules\ByuNumber;
+use App\Rules\PhoneNumber;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -44,8 +45,8 @@ class HomeController extends Controller
             'semester' => 'required',
             'hobi' => 'required',
             // 'telp' => 'required|numeric|digits_between:11,13',
-            'telp' => ['required', 'numeric', 'digits_between:11,13', new ByuNumber],
-            'wa' => 'required|numeric|digits_between:11,13',
+            'telp' => ['required', 'numeric', 'digits_between:11,13', new PhoneNumber],
+            'wa' => ['required', 'numeric', 'digits_between:11,13', new PhoneNumber],
         ]);
 
         $count = DB::table('peserta_event')->where('telp', $request->telp)->where('event', $event->id)->count();
