@@ -120,4 +120,10 @@ class HomeController extends Controller
 
         return response()->json($sekolah);
     }
+
+    public function update_session(Request $request)
+    {
+        session(['close_popup' => $request->close_popup]);
+        return response()->json(['message' => 'Session updated successfully']);
+    }
 }

@@ -110,6 +110,17 @@
         </div>
     </div>
 
+    @if (!session('close_popup'))
+        <div class="fixed inset-0 z-20 flex items-center justify-center w-full h-full px-8 py-10 overflow-auto bg-black/80"
+            id="popup" x-transition>
+            <i class="absolute z-10 text-3xl text-white transition cursor-pointer fa-solid fa-xmark top-5 right-10 hover:text-premier"
+                id="close-popup"></i>
+            <div class="relative mx-auto rounded w-fit">
+                <img src="{{ asset('images/Sobat byU_A4.jpg') }}" alt="Sobat byU" class="max-h-screen my-6">
+            </div>
+        </div>
+    @endif
+
     @if (session('success'))
         <div class="flash-data d-none" data-flashdata="{{ session('success') }}"></div>
         <script>
@@ -153,6 +164,21 @@
 
             $("#close-search").click(function() {
                 $("#search").hide()
+            })
+
+            $("#close-popup").click(function() {
+                $("#popup").hide()
+
+                $.ajax({
+                    type: 'GET',
+                    url: "{{ URL::to('/update_session') }}", // Define a route for updating the session
+                    data: {
+                        close_popup: true
+                    },
+                    success: function(data) {
+                        console.log(data);
+                    }
+                });
             })
 
             const findSchool = () => {

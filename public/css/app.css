@@ -897,6 +897,9 @@ select {
 .w-10\/12 {
   width: 83.333333%;
 }
+.w-3\/4 {
+  width: 75%;
+}
 .max-w-6xl {
   max-width: 72rem;
 }
@@ -1245,6 +1248,10 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;

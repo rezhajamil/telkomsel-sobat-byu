@@ -29,5 +29,6 @@ Route::resource('/esport', EsportController::class);
 Route::resource('/peserta', PesertaController::class);
 
 Route::post('/find_school', [HomeController::class, 'find_school']);
+Route::get('/update_session', [HomeController::class, 'update_session']);
 
 require __DIR__ . '/auth.php';
