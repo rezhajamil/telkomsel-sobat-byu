@@ -42,7 +42,7 @@ class HomeController extends Controller
             'npsn' => 'required|numeric|digits:8',
             'nama' => 'required',
             'email' => 'required|email',
-            'semester' => 'required',
+            'semester' => 'required|numeric',
             'hobi' => 'required',
             // 'telp' => 'required|numeric|digits_between:11,13',
             'telp' => ['required', 'numeric', 'digits_between:11,13', new PhoneNumber],

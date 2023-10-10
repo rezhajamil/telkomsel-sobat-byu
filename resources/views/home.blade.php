@@ -30,20 +30,25 @@
                         @enderror
                     </div>
                     <div class="w-full col-span-full md:col-span-1">
-                        <input
-                            class="w-full border-2 rounded outline-2 placeholder:text-xs sm:placeholder:text-sm outline-sekunder ring-sekunder border-sekunder"
-                            placeholder="Nama Lengkap" type="text" name="nama" value="{{ old('nama') }}">
-                        @error('nama')
-                            <span class="block mt-1 text-sm italic text-premier">{{ $message }}</span>
+                        <select name="semester" id="semester"
+                            class="w-full text-xs border-2 rounded sm:text-sm outline-2 outline-sekunder ring-sekunder border-sekunder">
+                            <option value="" selected disabled>Pilih Semester</option>
+                            @for ($i = 1; $i <= 14; $i++)
+                                <option value="{{ $i }}" {{ old('semester') == $i ? 'selected' : '' }}>
+                                    {{ $i }}
+                                </option>
+                            @endfor
+                        </select>
+                        @error('semester')
+                            <span class="block mt-1 text-sm italic text-red-600">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="w-full col-span-full md:col-span-1">
                         <input
                             class="w-full border-2 rounded outline-2 placeholder:text-xs sm:placeholder:text-sm outline-sekunder ring-sekunder border-sekunder"
-                            id="semester" placeholder="Semester" type="number" name="semester"
-                            value="{{ old('semester') }}">
-                        @error('semester')
-                            <span class="inline-block mt-1 text-sm italic text-red-600">{{ $message }}</span>
+                            placeholder="Nama Lengkap" type="text" name="nama" value="{{ old('nama') }}">
+                        @error('nama')
+                            <span class="block mt-1 text-sm italic text-premier">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="w-full col-span-full md:col-span-1">
@@ -109,6 +114,10 @@
             </div>
         </div>
     </div>
+    <div class="w-full sm:py-2 bg-premier">
+        @include('components.carousel')
+    </div>
+    @include('components.footer')
 
     @if (!session('close_popup'))
         <div class="fixed inset-0 z-20 flex items-center justify-center w-full h-full px-8 py-10 overflow-auto bg-black/80"
@@ -218,6 +227,22 @@
                     }
                 })
             }
+
+            const carousel_items = [];
+
+            $(".carousel-item").map((idx, item) => {
+                carousel_items.push({
+                    position: idx,
+                    el: item
+                })
+            })
+
+            // console.log(carousel_items);
+
+            const carousel = new Carousel(carousel_items, {
+                interval: 4000
+            })
+            carousel.cycle()
         })
     </script>
 @endsection

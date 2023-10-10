@@ -11,7 +11,8 @@
 
     <meta name="description" content="SOBAT byU">
 
-    <title>SOBAT byU </title>
+    <title>Sobat by.U | Spark Of Our Best Attractive Talents</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="icon" href="{{ asset('images/byu-white.svg') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -22,7 +23,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 
     <style type="text/css">
         @font-face {
