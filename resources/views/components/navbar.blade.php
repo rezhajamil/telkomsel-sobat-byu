@@ -1,5 +1,5 @@
 <div
-    class="flex items-center justify-between w-full px-4 py-4 border-b-2 shadow-md border-b-tersier bg-sekunder shadow-tersier">
+    class="flex items-center justify-between w-full px-4 py-4 border-b-2 shadow-sm border-b-tersier bg-sekunder shadow-tersier">
     {{-- <a class="flex items-center h-10 md:h-16" href="{{ URL::to('/') }}">
         <img src="{{ asset('images/logo-gubernur.svg') }}" alt="Pemkot Medan" class="z-10 h-full">
     </a> --}}
