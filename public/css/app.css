@@ -1402,6 +1402,9 @@ select {
 .text-\[10px\] {
   font-size: 10px;
 }
+.text-\[9px\] {
+  font-size: 9px;
+}
 .font-bold {
   font-weight: 700;
 }
