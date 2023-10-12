@@ -24,7 +24,7 @@
                         <span
                             class="inline-block mt-1 text-sm underline transition-all cursor-pointer text-sekunder hover:text-black"
                             id="find-school"><i class="mr-1 text-sm fa-solid fa-magnifying-glass text-sekunder"></i>Cari
-                            Sekolah</span>
+                            Kampus</span>
                         @error('npsn')
                             <span class="inline-block mt-1 text-sm italic text-red-600">{{ $message }}</span>
                         @enderror
@@ -103,9 +103,9 @@
                     x-on:click="search=false" id="close-search"></i>
                 <div class="flex flex-col w-full mx-4 overflow-hidden bg-white rounded-lg sm:w-1/2">
                     <span class="inline-block w-full p-4 mb-4 text-lg font-bold text-center text-white bg-premier">Cari
-                        Sekolah</span>
-                    <input type="text" class="mx-4 rounded" name="sekolah" id="sekolah"
-                        placeholder="Ketik Nama Sekolah" class="mb-4" autofocus>
+                        Kampus</span>
+                    <input type="text" class="mx-4 rounded" name="kampus" id="kampus" placeholder="Ketik Nama Kampus"
+                        class="mb-4" autofocus>
                     <img src="{{ asset('images/loading.svg') }}" alt="Loading" id="loading"
                         class="w-24 h-24 mx-auto mt-6">
                     <div class="flex flex-col w-full h-64 py-2 mt-2 overflow-auto" id="school-list">
@@ -160,7 +160,7 @@
         $(document).ready(function() {
             $('#loading').hide();
 
-            $('#sekolah').on('keypress', function() {
+            $('#kampus').on('keypress', function() {
                 if (event.which === 13) { // Check if Enter key (key code 13) is pressed
                     $('#loading').show();
                     findSchool();
@@ -198,7 +198,7 @@
                     method: "POST",
                     dataType: "JSON",
                     data: {
-                        name: $('#sekolah').val(),
+                        name: $('#kampus').val(),
                         _token: _token
                     },
                     success: (data) => {
