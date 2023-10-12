@@ -52,7 +52,7 @@ class HomeController extends Controller
         $count = DB::table('peserta_event')->where('telp', $request->telp)->where('event', $event->id)->count();
 
         if ($count > 0) {
-            return redirect('/')->with('error', 'Anda Sudah Terdaftar sebagai Sobat byU');
+            return redirect('/')->with('error', 'Anda Sudah Terdaftar di program TELMA');
         } else {
             $stage = DB::table('peserta_event')->insert([
                 'npsn' => $request->npsn,
@@ -65,7 +65,7 @@ class HomeController extends Controller
                 'event' => $event->id,
             ]);
 
-            return redirect('/')->with('success', 'Anda Berhasil Mendaftar sebagai Sobat byU');
+            return redirect('/')->with('success', 'Anda Berhasil Mendaftar di program TELMA');
         }
     }
 

@@ -3,7 +3,7 @@
     @include('components.navbar')
     <div class="w-full px-4 my-6 h-fit md:px-32">
         <div class="w-full overflow-hidden rounded-md h-fit">
-            <img src="{{ asset('images/backdrop.png') }}" alt="Backdrop Sobat byU">
+            <img src="{{ asset('images/telma.png') }}" alt="Backdrop TELMA">
         </div>
     </div>
 
@@ -115,11 +115,11 @@
         </div>
     </div>
     <div class="w-full sm:py-2 bg-premier">
-        @include('components.carousel')
+        {{-- @include('components.carousel') --}}
     </div>
     @include('components.footer')
 
-    @if (!session('close_popup'))
+    {{-- @if (!session('close_popup'))
         <div class="fixed inset-0 z-20 flex items-center justify-center w-full h-full px-8 py-10 overflow-auto bg-black/80"
             id="popup" x-transition>
             <i class="absolute z-10 text-3xl text-white transition cursor-pointer fa-solid fa-xmark top-5 right-10 hover:text-premier"
@@ -128,7 +128,7 @@
                 <img src="{{ asset('images/Sobat byU_A4.jpg') }}" alt="Sobat byU" class="max-h-screen my-6">
             </div>
         </div>
-    @endif
+    @endif --}}
 
     @if (session('success'))
         <div class="flash-data d-none" data-flashdata="{{ session('success') }}"></div>
