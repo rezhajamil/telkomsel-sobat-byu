@@ -11,7 +11,7 @@
 
     <meta name="description" content="SOBAT byU">
 
-    <title>Sobat by.U | Spark Of Our Best Attractive Talents</title>
+    <title>TELMA | Telkomsel Lifestylepreneur Academy</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="icon" href="{{ asset('images/byu-white.svg') }}">
